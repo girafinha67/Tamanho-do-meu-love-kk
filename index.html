@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#04050a">
+  <meta name="description" content="Uma comparação um pouco diferente — do elefante até o infinito.">
+  <meta property="og:title" content="O tamanho do meu amor por você">
+  <meta property="og:description" content="Uma comparação um pouco diferente — do elefante até o infinito.">
+  <title>O tamanho do meu amor por você</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+    <linearGradient id="heartGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff8fae"/><stop offset=".55" stop-color="#ff3b73"/><stop offset="1" stop-color="#c4124f"/>
+    </linearGradient></defs></svg>
+  <div id="app" class="is-loading">
+    <!-- Fundo em camadas -->
+    <div class="nebula" aria-hidden="true"><i></i><i></i><i></i></div>
+    <canvas id="space" aria-hidden="true"></canvas>
+    <div class="glow" id="glow" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header class="top">
+      <div class="eyebrow">Uma comparação um pouco diferente — até o infinito</div>
+      <h1 class="title">O que é maior?</h1>
+      <div class="counter" id="counter" aria-live="polite"></div>
+    </header>
+
+    <main class="stage" id="stage">
+      <section class="scene" aria-live="polite">
+        <div class="object-wrap" id="objectWrap"></div>
+        <div class="fx" id="fx" aria-hidden="true"></div>
+      </section>
+      <button class="nav prev" id="prevBtn" type="button" aria-label="Voltar ao tamanho anterior">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <button class="nav next" id="nextBtn" type="button" aria-label="Mostrar o próximo tamanho">
+        <svg class="i-next" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        <svg class="i-redo" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.6-5.9M4 4v4.5h4.5"/></svg>
+      </button>
+    </main>
+
+    <div class="info" id="info"></div>
+
+    <div class="hint" id="hint" aria-hidden="true">
+      <span class="kbd">←</span><span class="kbd">→</span> ou deslize
+    </div>
+    <nav class="progress" id="progress" aria-label="Navegação"></nav>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
